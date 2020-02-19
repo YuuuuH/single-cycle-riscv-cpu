@@ -1,0 +1,85 @@
+ncverilog(64): 14.10-s005: (c) Copyright 1995-2014 Cadence Design Systems, Inc.
+TOOL:	ncverilog	14.10-s005: Started on Feb 19, 2020 at 15:10:07 CST
+ncverilog
+	-f presim.f
+		top_tb.v
+		top.v
+		+nc64bit
+		+access+r
+Loading snapshot worklib.top_tb:v .................... Done
+*Verdi* Loading libsscore_ius141.so
+ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_O-2018.09, Linux x86_64/64bit, 08/30/2018
+(C) 1996 - 2018 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'top.fsdb'
+*Verdi* : Begin traversing the scope (top_tb.TOP), layer (0).
+*Verdi* : Enable +struct and +mda dumping.
+*Verdi* : End of traversing.
+
+Done
+
+DM[   0] = fffffff0, pass
+DM[   1] = fffffff8, pass
+DM[   2] = 00000008, pass
+DM[   3] = 00000001, pass
+DM[   4] = 00000001, pass
+DM[   5] = 78787878, pass
+DM[   6] = 000091a2, pass
+DM[   7] = 00000003, pass
+DM[   8] = fefcfefd, pass
+DM[   9] = 10305070, pass
+DM[  10] = cccccccc, pass
+DM[  11] = ffffffcc, pass
+DM[  12] = ffffcccc, pass
+DM[  13] = 000000cc, pass
+DM[  14] = 0000cccc, pass
+DM[  15] = 00000d9d, pass
+DM[  16] = 00000004, pass
+DM[  17] = 00000003, pass
+DM[  18] = 000001a6, pass
+DM[  19] = 00000ec6, pass
+DM[  20] = 2468b7a8, pass
+DM[  21] = 5dbf9f00, pass
+DM[  22] = 00012b38, pass
+DM[  23] = fa2817b7, pass
+DM[  24] = ff000000, pass
+DM[  25] = 12345678, pass
+DM[  26] = 0000f000, pass
+DM[  27] = 00000f00, pass
+DM[  28] = 000000f0, pass
+DM[  29] = 0000000f, pass
+DM[  30] = 00005678, expect = 56780000
+DM[  31] = 00000078, expect = 78000000
+DM[  32] = 00005678, pass
+DM[  33] = 00000078, pass
+DM[  34] = 12345678, pass
+DM[  35] = 000056f0, expect = ce780000
+DM[  36] = fffff000, pass
+DM[  37] = fffff000, pass
+DM[  38] = fffff000, pass
+DM[  39] = fffff000, pass
+DM[  40] = fffff000, pass
+DM[  41] = fffff000, pass
+DM[  42] = 1357a064, pass
+DM[  43] = 13578000, pass
+DM[  44] = fffff004, pass
+
+
+
+
+        ****************************               
+        **                        **       |__||  
+        **  OOPS!!                **      / X,X  | 
+        **                        **    /_____   | 
+        **  Simulation Failed!!   **   /^ ^ ^ \  |
+        **                        **  |^ ^ ^ ^ |w| 
+        ****************************   \m___m__|_|
+         Totally has           3 errors                     
+
+
+Simulation complete via $finish(1) at time 101030 NS + 0
+./top_tb.v:66             $finish;
+ncsim> exit
+TOOL:	ncverilog	14.10-s005: Exiting on Feb 19, 2020 at 15:10:10 CST  (total: 00:00:03)
