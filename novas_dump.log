@@ -22,11 +22,11 @@ SELINUX_ROLE_REQUESTED=
 TERM=xterm
 SHELL=/bin/sh
 HISTSIZE=1000
-SSH_CLIENT=140.116.245.113 58292 22
+SSH_CLIENT=140.116.245.113 59324 22
 SELINUX_USE_CURRENT_RANGE=
 QTDIR=/usr/lib64/qt-3.3
 QTINC=/usr/lib64/qt-3.3/include
-SSH_TTY=/dev/pts/2
+SSH_TTY=/dev/pts/8
 USER=yuhong
 LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.tbz=01;31:*.tbz2=01;31:*.bz=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:
 MAIL=/var/spool/mail/yuhong
@@ -41,9 +41,9 @@ LANGUAGE=en_US.UTF-8
 LOGNAME=yuhong
 QTLIB=/usr/lib64/qt-3.3/lib
 CVS_RSH=ssh
-SSH_CONNECTION=140.116.245.113 58292 140.116.245.125 22
+SSH_CONNECTION=140.116.245.113 59324 140.116.245.125 22
 LESSOPEN=|/usr/bin/lesspipe.sh %s
-DISPLAY=localhost:12.0
+DISPLAY=localhost:18.0
 G_BROKEN_FILENAMES=1
 _=/bin/tcsh
 HOSTTYPE=x86_64-linux
@@ -92,9 +92,9 @@ argv[4]=top.v
 argv[5]=+nc64bit
 argv[6]=+access+r
 93 profile - 100
-          CPU/Mem usage: 0.050 sys,  0.050 user,  91.30M sys,  0.00M vm
+          CPU/Mem usage: 0.070 sys,  0.050 user,  91.32M sys,  0.00M vm
 94 VC callback profile - scalar:0 vector:0
-95 Wed Feb 19 15:10:09 2020
+95 Wed Feb 19 18:01:00 2020
 96 pliAppInit
 97 FSDB_GATE is disabled.
 98 Enable Parallel Dumping.
@@ -104,7 +104,7 @@ argv[6]=+access+r
 102 argv[0]: top.fsdb
 103 argv[0]: +struct
 104 argv[1]: +mda
-105 argv[2]: (handle)0x3baf288 top_tb.TOP
+105 argv[2]: (handle)0x4062ed8 top_tb.TOP
 106 FSDB Dumper for IUS, Release Verdi_O-2018.09, Linux x86_64/64bit, 08/30/2018
 107 (C) 1996 - 2018 by Synopsys, Inc.
 108 sps_call_fsdbDumpfile at 0 : /home/yuhong/hw4/hw4_single_cycle_riscv_cpu/F740XXXXX/src/top_tb.v(94)
@@ -114,43 +114,43 @@ argv[6]=+access+r
 112 sps_call_fsdbDumpvars at 0 : /home/yuhong/hw4/hw4_single_cycle_riscv_cpu/F740XXXXX/src/top_tb.v(95)
 113 argv[0]: +struct
 114 argv[1]: +mda
-115 argv[2]: (handle)0x3baf268 top_tb.TOP
+115 argv[2]: (handle)0x4062eb8 top_tb.TOP
 116 *Verdi* : Begin traversing the scope (top_tb.TOP), layer (0).
 117 *Verdi* : Enable +struct and +mda dumping.
 118 *Verdi* : End of traversing.
 119 fsdbDumpvars traverse var: profile - 
-          CPU/Mem usage: 0.080 sys,  0.600 user,  200.63M sys,  0.00M vm
-                   incr: 0.020 sys,  0.540 user,  26.22M sys,  0.00M vm
-                   accu: 0.020 sys,  0.540 user,  26.22M sys,  0.00M vm
-              accu incr: 0.020 sys,  0.540 user,  26.22M sys,  0.00M vm
+          CPU/Mem usage: 0.090 sys,  0.600 user,  200.65M sys,  0.00M vm
+                   incr: 0.020 sys,  0.550 user,  26.22M sys,  0.00M vm
+                   accu: 0.020 sys,  0.550 user,  26.22M sys,  0.00M vm
+              accu incr: 0.020 sys,  0.550 user,  26.22M sys,  0.00M vm
 
           Count usage: 131213 var,  131181 idcode,  131189 callback
                  incr: 131213 var,  131181 idcode,  131189 callback
                  accu: 131213 var,  131181 idcode,  131189 callback
             accu incr: 131213 var,  131181 idcode,  131189 callback
 120 VC callback profile - scalar:0 vector:0
-121 Wed Feb 19 15:10:10 2020
+121 Wed Feb 19 18:01:00 2020
 122 fsdbDumpvars: profile - 
-          CPU/Mem usage: 0.080 sys,  0.680 user,  210.10M sys,  0.00M vm
-                   incr: 0.000 sys,  0.080 user,  9.47M sys,  0.00M vm
-                   accu: 0.020 sys,  0.620 user,  35.69M sys,  0.00M vm
-              accu incr: 0.000 sys,  0.080 user,  9.47M sys,  0.00M vm
+          CPU/Mem usage: 0.100 sys,  0.690 user,  210.11M sys,  0.00M vm
+                   incr: 0.010 sys,  0.090 user,  9.47M sys,  0.00M vm
+                   accu: 0.030 sys,  0.640 user,  35.69M sys,  0.00M vm
+              accu incr: 0.010 sys,  0.090 user,  9.47M sys,  0.00M vm
 
           Count usage: 131213 var,  131181 idcode,  131189 callback
                  incr: 0 var,  0 idcode,  0 callback
                  accu: 131213 var,  131181 idcode,  131189 callback
             accu incr: 0 var,  0 idcode,  0 callback
 123 VC callback profile - scalar:21 vector:131160
-124 Wed Feb 19 15:10:10 2020
+124 Wed Feb 19 18:01:01 2020
 125 End of simulation at 10103000
-126 VC callback profile - scalar:76346 vector:430077
-127 Wed Feb 19 15:10:10 2020
+126 VC callback profile - scalar:76346 vector:430075
+127 Wed Feb 19 18:01:01 2020
 128 Begin FSDB profile info:
-129 FSDB Writer : bc1(76346) bcn(430077) mtf/stf(0/0)
-FSDB Writer elapsed time : flush(0.195808) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
+129 FSDB Writer : bc1(76346) bcn(430075) mtf/stf(0/0)
+FSDB Writer elapsed time : flush(0.179823) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
 FSDB Writer cpu time : MT Compression : 0
 130 End FSDB profile info
 131 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:2 BlockUsed:2
-132                        ProduceTime:1.030736909 ConsumerTime:0.031707136 Buffer:64MB
+132                        ProduceTime:1.057306105 ConsumerTime:0.042292379 Buffer:64MB
 133 SimExit
 134 Sim process exit

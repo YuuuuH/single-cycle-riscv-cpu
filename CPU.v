@@ -254,15 +254,16 @@ assign mem_out    = data_out;
 
 
 always@(*)begin
+    data_in = 32'b0;
     case(data_write)
         4'b1111:data_in = rs2_data;
-        4'b1000:data_in = rs2_data[7:0];
-        4'b1100:data_in = rs2_data[15:0];
-        4'b0100:data_in = rs2_data[7:0];
-        4'b0110:data_in = rs2_data[15:0];
-        4'b0010:data_in = rs2_data[7:0];
-        4'b0011:data_in = rs2_data[15:0];
-        4'b0001:data_in = rs2_data[7:0];
+        4'b1000:data_in[31:24] = rs2_data[7:0];
+        4'b1100:data_in[31:16] = rs2_data[15:0];
+        4'b0100:data_in[23:16] = rs2_data[7:0];
+        4'b0110:data_in[23:8] = rs2_data[15:0];
+        4'b0010:data_in[15:8] = rs2_data[7:0];
+        4'b0011:data_in[15:0]= rs2_data[15:0];
+        4'b0001:data_in[7:0] = rs2_data[7:0];
         default:data_in = rs2_data;
     endcase
 end

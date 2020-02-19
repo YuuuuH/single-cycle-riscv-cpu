@@ -1,11 +1,43 @@
 ncverilog(64): 14.10-s005: (c) Copyright 1995-2014 Cadence Design Systems, Inc.
-TOOL:	ncverilog	14.10-s005: Started on Feb 19, 2020 at 15:10:07 CST
+TOOL:	ncverilog	14.10-s005: Started on Feb 19, 2020 at 18:00:58 CST
 ncverilog
 	-f presim.f
 		top_tb.v
 		top.v
 		+nc64bit
 		+access+r
+Recompiling... reason: file './CPU.v' is newer than expected.
+	expected: Wed Feb 19 14:39:38 2020
+	actual:   Wed Feb 19 18:00:34 2020
+file: top_tb.v
+      $fscanf(gf, "%h\n", GOLDEN[num]);
+            |
+ncvlog: *W,NOSYST (top_tb.v,47|12): System function '$fscanf' invoked as a task. Return value will be ignored.
+file: top.v
+	module worklib.Decoder:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.CPU:v <0x7f48c186>
+			streams:  24, words:  9508
+		worklib.Decoder:v <0x2f478cb0>
+			streams:   1, words: 15391
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                 11      10
+		Registers:               45      40
+		Scalar wires:            12       -
+		Vectored wires:          39       -
+		Always blocks:           18      16
+		Initial blocks:           2       2
+		Cont. assignments:       13      14
+		Pseudo assignments:      13      13
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.top_tb:v
 Loading snapshot worklib.top_tb:v .................... Done
 *Verdi* Loading libsscore_ius141.so
 ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
@@ -50,12 +82,12 @@ DM[  26] = 0000f000, pass
 DM[  27] = 00000f00, pass
 DM[  28] = 000000f0, pass
 DM[  29] = 0000000f, pass
-DM[  30] = 00005678, expect = 56780000
-DM[  31] = 00000078, expect = 78000000
+DM[  30] = 56780000, pass
+DM[  31] = 78000000, pass
 DM[  32] = 00005678, pass
 DM[  33] = 00000078, pass
 DM[  34] = 12345678, pass
-DM[  35] = 000056f0, expect = ce780000
+DM[  35] = ce780000, pass
 DM[  36] = fffff000, pass
 DM[  37] = fffff000, pass
 DM[  38] = fffff000, pass
@@ -71,15 +103,14 @@ DM[  44] = fffff004, pass
 
         ****************************               
         **                        **       |__||  
-        **  OOPS!!                **      / X,X  | 
+        **  Congratulations !!    **      / O.O  | 
         **                        **    /_____   | 
-        **  Simulation Failed!!   **   /^ ^ ^ \  |
+        **  Simulation PASS!!     **   /^ ^ ^ \  |
         **                        **  |^ ^ ^ ^ |w| 
         ****************************   \m___m__|_|
-         Totally has           3 errors                     
 
 
 Simulation complete via $finish(1) at time 101030 NS + 0
 ./top_tb.v:66             $finish;
 ncsim> exit
-TOOL:	ncverilog	14.10-s005: Exiting on Feb 19, 2020 at 15:10:10 CST  (total: 00:00:03)
+TOOL:	ncverilog	14.10-s005: Exiting on Feb 19, 2020 at 18:01:01 CST  (total: 00:00:03)

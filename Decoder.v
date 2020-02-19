@@ -158,30 +158,30 @@ always @(*) begin
                                 MemWrite = 4'b0000;
                             end
                             else begin
-                                MemWrite = 4'b1000;
+                                MemWrite = 4'b0001;
                             end
                         end
-                        3'b001 :MemWrite = 4'b1100;
+                        3'b001 :MemWrite = 4'b0011;
                         default:MemWrite = 4'b0000;
                     endcase
                 end
                 2'b01:begin
                     case(Func3)
-                        3'b000:MemWrite = 4'b0100;
+                        3'b000:MemWrite = 4'b0010;
                         3'b001:MemWrite = 4'b0110;
                         default:MemWrite = 4'b0000;
                     endcase
                 end
                 2'b10:begin
                     case(Func3)
-                        3'b000:MemWrite = 4'b0010;
-                        3'b001:MemWrite = 4'b0011;
+                        3'b000:MemWrite = 4'b0100;
+                        3'b001:MemWrite = 4'b1100;
                         default:MemWrite = 4'b0000;
                     endcase
                 end
                 2'b11:begin
                     case(Func3)
-                        3'b000:MemWrite = 4'b0001;
+                        3'b000:MemWrite = 4'b1000;
                         default:MemWrite = 4'b0000;
                     endcase
                 end
