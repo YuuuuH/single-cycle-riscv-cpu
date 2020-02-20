@@ -1,29 +1,60 @@
 ncverilog(64): 14.10-s005: (c) Copyright 1995-2014 Cadence Design Systems, Inc.
-TOOL:	ncverilog	14.10-s005: Started on Feb 19, 2020 at 18:00:58 CST
+TOOL:	ncverilog	14.10-s005: Started on Feb 20, 2020 at 14:32:07 CST
 ncverilog
 	-f presim.f
 		top_tb.v
 		top.v
 		+nc64bit
 		+access+r
-Recompiling... reason: file './CPU.v' is newer than expected.
-	expected: Wed Feb 19 14:39:38 2020
-	actual:   Wed Feb 19 18:00:34 2020
 file: top_tb.v
       $fscanf(gf, "%h\n", GOLDEN[num]);
             |
 ncvlog: *W,NOSYST (top_tb.v,47|12): System function '$fscanf' invoked as a task. Return value will be ignored.
+	module worklib.top_tb:v
+		errors: 0, warnings: 1
 file: top.v
+	module worklib.Branch_Ctrl:v
+		errors: 0, warnings: 0
 	module worklib.Decoder:v
+		errors: 0, warnings: 0
+	module worklib.Register_File:v
+		errors: 0, warnings: 0
+	module worklib.ALU_control:v
+		errors: 0, warnings: 0
+	module worklib.ALU:v
+		errors: 0, warnings: 0
+	module worklib.Immediate_Generator:v
+		errors: 0, warnings: 0
+	module worklib.CPU:v
+		errors: 0, warnings: 0
+	module worklib.SRAM:v
+		errors: 0, warnings: 0
+	module worklib.top:v
 		errors: 0, warnings: 0
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
+		worklib.ALU:v <0x4460dbb8>
+			streams:   1, words:  4311
+		worklib.ALU_control:v <0x60839e9a>
+			streams:   1, words:  2484
+		worklib.Branch_Ctrl:v <0x3837e3b7>
+			streams:   1, words:   859
 		worklib.CPU:v <0x7f48c186>
 			streams:  24, words:  9508
 		worklib.Decoder:v <0x2f478cb0>
 			streams:   1, words: 15391
+		worklib.Immediate_Generator:v <0x4424e11b>
+			streams:   1, words:  1408
+		worklib.Register_File:v <0x7261f2dd>
+			streams:   5, words:  9901
+		worklib.SRAM:v <0x103f51dd>
+			streams:   4, words:  2874
+		worklib.top:v <0x54c447f4>
+			streams:   4, words:   587
+		worklib.top_tb:v <0x0c0627eb>
+			streams:   5, words: 20697
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
@@ -113,4 +144,4 @@ DM[  44] = fffff004, pass
 Simulation complete via $finish(1) at time 101030 NS + 0
 ./top_tb.v:66             $finish;
 ncsim> exit
-TOOL:	ncverilog	14.10-s005: Exiting on Feb 19, 2020 at 18:01:01 CST  (total: 00:00:03)
+TOOL:	ncverilog	14.10-s005: Exiting on Feb 20, 2020 at 14:32:10 CST  (total: 00:00:03)

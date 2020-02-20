@@ -186,12 +186,6 @@ always @(*) begin
                     endcase
                 end
             endcase
-            /*case(Func3)
-                3'b010 :MemWrite = 4'b1111;
-                3'b000 :MemWrite = 4'b0001;
-                3'b001 :MemWrite = 4'b0011;
-                default:MemWrite = 4'b1111;  
-            endcase*/
         end
         BTYPE : begin
             RegWrite   = 1'b0;
